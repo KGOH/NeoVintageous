@@ -336,6 +336,7 @@ def goto_prev_target(view, mode: str, count: int, target: str) -> None:
     targets = {
         '{': ('\\{', '\\}'),
         '(': ('\\(', '\\)'),
+        '[': ('\\[', '\\]'),
     }
 
     brackets = targets.get(target)
@@ -377,6 +378,7 @@ def goto_next_target(view, mode: str, count: int, target: str) -> None:
     targets = {
         '}': ('\\{', '\\}'),
         ')': ('\\(', '\\)'),
+        ']': ('\\[', '\\]'),
     }
 
     brackets = targets.get(target)
